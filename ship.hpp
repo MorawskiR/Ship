@@ -24,17 +24,17 @@ class Ship {
   Ship(int ajdi, unsigned speedo, unsigned maxCrewo)
       : Ship(ajdi, "black pearl", speedo, maxCrewo, 10, 50) {}
 
-  void setName(const std::string& name) { name_ = name; }
+  void setName(const std::string& name) ;
 
   Ship& operator+=(const int a) {
     crew_ += a;
-    std::cout << "Ram memory extended\n";
+    //std::cout << "Ram memory extended\n";
     return *this;
   }
 
   Ship& operator-=(const int b) {
     crew_ -= b;
-    std::cout << "Ram memory extended\n";
+    //std::cout << "Ram memory extended\n";
     return *this;
   }
 
