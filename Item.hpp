@@ -3,15 +3,14 @@
 class Item : public Cargo{
 
 
-    private: 
-    
+private:  
     enum class rarity { common, rare, epic, legendary };
-    int num ;
-    public:
-    Item()
-    {
-        num = static_cast<int>(rarity::common);
-    }
+    rarity enumField_;
+public:
+
+    Item(std::string name, int amount, double basePrice, double price, rarity r);
+
+
     size_t getPrice() const override; 
     std::string getName() const override;
     size_t getAmount() const override ;

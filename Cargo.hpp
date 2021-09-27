@@ -10,6 +10,10 @@ protected:
 
 public:
 
+    Cargo(std::string name, int amount, double basePrice, double price)
+            :   amount_(amount), name_(name), basePrice_(basePrice), price_(price)
+            {}
+
     virtual size_t getPrice() const = 0;
     virtual std::string getName() const = 0;
     virtual size_t getAmount() const = 0;

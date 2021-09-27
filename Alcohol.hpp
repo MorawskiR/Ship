@@ -3,11 +3,13 @@
 class Alcohol : public Cargo{
 
 
-    private: 
-    size_t spirytProcent;
+private: 
+    size_t spirytProcent_;
 
 
-    public:
+public:
+
+    Alcohol(std::string name, int amount, double basePrice, double price, size_t spirytProcent_);
 
     size_t getPrice() const override; 
     std::string getName() const override;
